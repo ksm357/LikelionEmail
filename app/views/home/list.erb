@@ -1,0 +1,30 @@
+<style>
+  body {
+    background-color: #E0F8F7;
+    margin-left : 7%;
+    margin-right : 7%;
+  }
+  h4 {
+      color:#FA5882;
+  }
+  p {
+      border : 1px solid blue;
+      background-color : #F5F6CE;
+  }
+</style>
+<div align="center">
+    <img src="http://danamedipia.com/data/cheditor4/1409/fd26b9132334d3232c391b49db15bead_20140911150414_iamgxrtz.jpg">
+</div>
+<h2 align="center">전송이 완료되었습니다요~<br></h2>
+<h3 align="right"><a href="/">메인으로 가기</a></h3>
+<h4 align="left"><em>보내신 메일 기록입니다</em></h4>
+<hr>
+<p align="left">
+<% @email_post.each do |p|%>
+<strong>제목 :</strong> <%=p.title %>
+<strong>받는 사람 :</strong> <%=p.address %>
+<strong>보내신 시간 :</strong> <%=p.created_at %><br>
+<strong>보내실 내용 :</strong> <%=p.content %>
+<hr>
+<% end %>
+</p>
